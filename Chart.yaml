@@ -1,0 +1,16 @@
+apiVersion: v2
+name: s3manager
+description: Chart for s3manager - web GUI for s3
+type: application
+version: 0.1.0
+appVersion: 0.2.0
+keywords:
+  - s3
+  - s3manager
+home: https://github.com/sergeyshevch/s3manager-helm
+sources:
+  - https://github.com/cloudlena/s3manager
+maintainers:
+  - name: sergeyshevch
+    email: sergeyshevchdevelop@gmail.com
+    url: https://github.com/sergeyshevch

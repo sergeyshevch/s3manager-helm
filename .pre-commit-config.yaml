@@ -1,0 +1,8 @@
+repos:
+  - repo: https://github.com/norwoodj/helm-docs
+    rev: v1.2.0
+    hooks:
+      - id: helm-docs
+        args:
+          - --template-files=README.md.gotmpl
+          - --template-files=CHANGELOG.md.gotmpl

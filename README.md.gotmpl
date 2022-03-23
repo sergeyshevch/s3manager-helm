@@ -1,0 +1,40 @@
+{{ template "chart.header" . }}
+{{ template "chart.deprecationWarning" . }}
+
+{{ template "chart.badgesSection" . }}
+
+{{ template "chart.description" . }}
+
+{{ template "chart.homepageLine" . }}
+
+{{ template "chart.maintainersSection" . }}
+
+{{ template "chart.sourcesSection" . }}
+
+{{ template "chart.requirementsSection" . }}
+
+## Installation
+
+```
+helm repo add sergeyshevch https://sergeyshevch.github.io/charts
+helm upgrate --install sergeyshevch/s3manager-helm RELEASE_NAME
+```
+
+{{ template "changelog" }}
+
+{{ template "chart.valuesSection" . }}
+
+## Development
+
+### How to create new release?
+- Update CHANGELOG.md.gotmpl
+- Update chart version in `Chart.yaml`
+- Make sure that values.schema.json are in actual state
+- Update all documentation comments in values.yaml
+- Run `make preview` and test that all your changes works correctly
+- Run `make` To lint your chart and generate documentation
+- Update all component version numbers in ci.yml
+- Commit and push your pages
+- Create new tag (0.3.2)
+- Push new tag
+- Update version in values in ci-server repository

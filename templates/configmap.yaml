@@ -1,0 +1,10 @@
+{{- if .Values.configMap.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "s3manager.fullname" . }}
+  labels:
+    {{- include "s3manager.labels" . | nindent 4 }}
+data:
+  {{- toYaml .Values.configMap.data | nindent 2}}
+{{- end }}
