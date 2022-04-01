@@ -29,12 +29,9 @@ helm upgrate --install sergeyshevch/s3manager-helm RELEASE_NAME
 ### How to create new release?
 - Update CHANGELOG.md.gotmpl
 - Update chart version in `Chart.yaml`
-- Make sure that values.schema.json are in actual state
 - Update all documentation comments in values.yaml
 - Run `make preview` and test that all your changes works correctly
 - Run `make` To lint your chart and generate documentation
-- Update all component version numbers in ci.yml
-- Commit and push your pages
-- Create new tag (0.3.2)
+- Commit and push your changes
 - Push new tag
-- Update version in values in ci-server repository
+- Run make script on https://github.com/sergeyshevch/charts
