@@ -10,13 +10,14 @@ spec:
   ports:
     {{- range .Values.ports}}
     - port: {{ .servicePort }}
-      targetPort: {{ .name }}
+      targetPort: {{ .targetPort }}
+      nodePort: {{ .nodePort }}
       protocol: {{ .protocol }}
       name: {{ .name }}
     {{- end }}
     {{- range .Values.service.additionalPorts }}
     - port: {{ .servicePort }}
-      targetPort: {{ .name }}
+      targetPort: {{ .targetPort }}
       protocol: {{ .protocol }}
       name: {{ .name }}
     {{- end }}
