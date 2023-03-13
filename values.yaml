@@ -53,9 +53,11 @@ extraContainers: []
 
 ports:
   - name: http
-    containerPort: 80
-    servicePort: 80
+    containerPort: 8080
+    servicePort: 8080
     protocol: TCP
+    targetPort: 8080
+    nodePort: 45884
 
 configMap:
   enabled: true
@@ -115,3 +117,9 @@ tolerations: [ ]
 affinity: { }
 
 topologySpreadConstraints: [ ]
+
+# -- Mapping between IP and hostnames that will be injected as entries in the pod's hosts files
+hostAliases: []
+# - ip: 10.20.30.40
+#   hostnames:
+#   - git.myhostname

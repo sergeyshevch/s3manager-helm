@@ -22,6 +22,20 @@ Chart for s3manager - web GUI for s3
 helm repo add sergeyshevch https://sergeyshevch.github.io/charts
 helm upgrate --install sergeyshevch/s3manager-helm RELEASE_NAME
 ```
+## deploy
+vi ~/s3.yaml, like below
+```shell
+configMap:
+     enabled: true
+     data: {
+       "ACCESS_KEY_ID": "*",
+       "SECRET_ACCESS_KEY": "*",
+       "ENDPOINT": "*",
+       "REGION": "*",
+       "USE_SSL": "*"
+     }
+```
+helm install s3manager ./s3manager-helm -f ~/s3.yaml 
 
 ## Changelog
 
