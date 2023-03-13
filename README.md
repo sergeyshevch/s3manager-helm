@@ -36,6 +36,8 @@ configMap:
      }
 ```
 helm install s3manager ./s3manager-helm -f ~/s3.yaml 
+ 
+http://nodeIP:45884/ to set S3 Manager 
 
 ## Changelog
 

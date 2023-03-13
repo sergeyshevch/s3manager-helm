@@ -69,7 +69,7 @@ secret:
 
 service:
   enabled: true
-  type: ClusterIP
+  type: NodePort
   # -- Same structure as in ports
   additionalPorts: []
 
